@@ -3,6 +3,7 @@
   "version": "0.1.2",
   "license": "CC0-1.0",
   "private": false,
+  "main": "dist/react-charging-station-connector-icons.js",
   "module": "src/react-charging-station-connector-icons.js",
   "sideEffects": false,
   "files": [
