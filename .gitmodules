@@ -1,0 +1,3 @@
+[submodule "charging-station-connector-icons"]
+	path = charging-station-connector-icons
+	url = https://github.com/binary-butterfly/charging-station-connector-icons
