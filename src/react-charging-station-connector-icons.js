@@ -44,9 +44,9 @@ import TeslaSLightSubtitledIcon from '../charging-station-connector-icons/light-
 const showIcon = (variants, props, variant, subtitled) => {
     let Ret;
     if (variant === 'solid') {
-        Ret = subtitled ? variants['solid']['subtitled'] : variants['solid']['default'];
+        Ret = subtitled && subtitled !== 'false' ? variants['solid']['subtitled'] : variants['solid']['default'];
     } else if (variant === 'light') {
-        Ret = subtitled ? variants['light']['subtitled'] : variants['light']['default'];
+        Ret = subtitled && subtitled !== 'false' ? variants['light']['subtitled'] : variants['light']['default'];
     } else {
         throw Error('Unsupported variant: ' + variant);
     }
