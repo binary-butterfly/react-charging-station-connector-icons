@@ -12,3 +12,5 @@ charging-station-connector-icons/
 .idea
 
 npm-debug.log*
+
+dist/
