@@ -25,6 +25,10 @@ import IEC62196T1SolidIcon from '../charging-station-connector-icons/solid/IEC_6
 import IEC62196T1SolidSubtitledIcon from '../charging-station-connector-icons/solid-subtitled/IEC_62196_T1.svg';
 import IEC62196T1LightIcon from '../charging-station-connector-icons/light/IEC_62196_T1.svg';
 import IEC62196T1LightSubtitledIcon from '../charging-station-connector-icons/light-subtitled/IEC_62196_T1.svg';
+import IEC62196T1ComboLightIcon from '../charging-station-connector-icons/light/IEC_62196_T1_COMBO.svg';
+import IEC62196T1ComboSolidIcon from '../charging-station-connector-icons/solid/IEC_62196_T1_COMBO.svg';
+import IEC62196T1ComboSolidSubtitledIcon from '../charging-station-connector-icons/solid-subtitled/IEC_62196_T1_COMBO.svg';
+import IEC62196T1ComboLightSubtitledIcon from '../charging-station-connector-icons/light-subtitled/IEC_62196_T1_COMBO.svg';
 import IEC62196T2SolidIcon from '../charging-station-connector-icons/solid/IEC_62196_T2.svg';
 import IEC62196T2SolidSubtitledIcon from '../charging-station-connector-icons/solid-subtitled/IEC_62196_T2.svg';
 import IEC62196T2LightIcon from '../charging-station-connector-icons/light/IEC_62196_T2.svg';
@@ -102,6 +106,15 @@ export const IEC62196T1 = (props) => {
 };
 
 IEC62196T1.propTypes = iconPropTypes;
+
+export const IEC62196T1Combo = (props) => {
+    return showIcon({
+        solid: {default: IEC62196T1ComboSolidIcon, subtitled: IEC62196T1ComboSolidSubtitledIcon},
+        light: {default: IEC62196T1ComboLightIcon, subtitled: IEC62196T1ComboLightSubtitledIcon},
+    }, props, props.variant, props.subtitled);
+};
+
+IEC62196T1Combo.propTypes = iconPropTypes;
 
 export const IEC62196T2 = (props) => {
     return showIcon({
