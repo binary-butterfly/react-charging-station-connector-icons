@@ -6,6 +6,9 @@ module.exports = (env, argv) => {
     return {
         target: 'web',
         entry: './src/react-charging-station-connector-icons.js',
+        externals: {
+            react: 'react',
+        },
         output: {
             path: path.join(__dirname + '/dist'),
             filename: 'react-charging-station-connector-icons.js',
