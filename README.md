@@ -26,3 +26,9 @@ The following components are available:
 * `<TeslaS/>`
 
 All icons are available in solid and light variants as well as with- and without subtitles.
+
+## Vertical centering
+
+To allow you to access and style the exported icon as directly as possible, icons may not be vertically centered by default.  
+To quickly accomplish vertical centering, wrap the icon withing a `<span>` with the
+styles `display: flex|inline-flex; align-items: center;`
