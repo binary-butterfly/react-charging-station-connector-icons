@@ -5,12 +5,14 @@
   "private": false,
   "main": "dist/react-charging-station-connector-icons.js",
   "sideEffects": false,
+  "jsnext:main": "src/react-charging-station-connector-icons.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/binary-butterfly/react-charging-station-connector-icons"
   },
   "files": [
-    "dist"
+    "dist",
+    "src"
   ],
   "scripts": {
     "prepublishOnly": "webpack --mode=production"
