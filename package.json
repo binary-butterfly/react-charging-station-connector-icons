@@ -1,27 +1,28 @@
 {
   "name": "react-charging-station-connector-icons",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "license": "CC0-1.0",
   "private": false,
   "main": "dist/react-charging-station-connector-icons.js",
   "sideEffects": false,
+  "jsnext:main": "src/react-charging-station-connector-icons.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/binary-butterfly/react-charging-station-connector-icons"
   },
   "files": [
-    "dist"
+    "dist",
+    "src"
   ],
   "scripts": {
     "prepublishOnly": "webpack --mode=production"
   },
   "devDependencies": {
-    "@svgr/webpack": "^5.5.0",
+    "@svgr/webpack": "^6.2.1",
     "babel-loader": "^8.2.2",
-    "prop-types": "^15.7.2",
-    "webpack": "^5.37.0",
-    "webpack-cli": "^4.7.0",
-    "webpack-dev-server": "^3.11.2"
+    "prop-types": "^15.8.1",
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.7.0"
   },
   "peerDependencies": {
     "react": "^17.0.2"
