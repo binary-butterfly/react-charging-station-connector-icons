@@ -6,12 +6,17 @@
         "targets": {
           "browsers": [
             "last 2 versions",
-            "safari >= 7",
-            "ie >= 11"
+            "safari >= 14",
+            "edge >= 44",
+            "not op_mini all"
           ]
         }
       }
     ],
-    "@babel/preset-react"
+    "@babel/preset-react",
+    "@babel/preset-typescript"
+  ],
+  "plugins": [
+    "@babel/plugin-transform-runtime",
   ]
 }
