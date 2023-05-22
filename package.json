@@ -19,7 +19,8 @@
     "build:prod": "NODE_ENV=production rollup -c rollup.config.js",
     "prepublishOnly": "npm run build:prod",
     "test": "jest --config jest.config.js",
-    "coverage": "jest --config jest.config.js --collectCoverage"
+    "coverage": "jest --config jest.config.js --collectCoverage",
+    "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.16.4",
