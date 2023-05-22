@@ -6,10 +6,10 @@ Packed as ready to use React components.
 
 ## How to use
 
-* Install the package using `npm install react-charging-station-connector-icons --save-dev`
+* Install the package using `npm install react-charging-station-connector-icons --save`
 * Import the icon(s) you want as named imports from this library  
   `import {Chademo} from react-charging-station-connector-icons`
-* You can now use them like this: `<Chademo variant={'solid'||'light'} subtitled={'true'||'false'}/>`.
+* You can now use them like this: `<Chademo variant={'solid'|'light'} subtitled={true|false}/>`.
 
 ## Available icons
 
