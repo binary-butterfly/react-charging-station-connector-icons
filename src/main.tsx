@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 
 import ChademoSolidIcon from '../charging-station-connector-icons/solid/CHADEMO.svg';
@@ -43,102 +42,77 @@ import TeslaSSolidIcon from '../charging-station-connector-icons/solid/TESLA_S.s
 import TeslaSSolidSubtitledIcon from '../charging-station-connector-icons/solid-subtitled/TESLA_S.svg';
 import TeslaSLightIcon from '../charging-station-connector-icons/light/TESLA_S.svg';
 import TeslaSLightSubtitledIcon from '../charging-station-connector-icons/light-subtitled/TESLA_S.svg';
+import {IconProps, IconVariantNames, IconVariants} from './types';
 
-
-const showIcon = (variants, props, variant, subtitled) => {
-    let Ret;
+const showIcon = (variants: IconVariants, props: IconProps, variant: IconVariantNames, subtitled: boolean) => {
     if (variant === 'solid') {
-        Ret = subtitled && subtitled !== 'false' ? variants['solid']['subtitled'] : variants['solid']['default'];
+        return subtitled? variants['solid']['subtitled'] : variants['solid']['default'];
     } else if (variant === 'light') {
-        Ret = subtitled && subtitled !== 'false' ? variants['light']['subtitled'] : variants['light']['default'];
+        return subtitled? variants['light']['subtitled'] : variants['light']['default'];
     } else {
         throw Error('Unsupported variant: ' + variant);
     }
-    return <Ret {...props}/>;
 };
 
-const iconPropTypes = {
-    variant: PropTypes.oneOf(['solid', 'light']).isRequired,
-    subtitled: PropTypes.bool.isRequired,
-};
-
-export const Chademo = (props) => {
+export const Chademo = (props: IconProps) => {
     return showIcon({
         solid: {default: ChademoSolidIcon, subtitled: ChademoSolidSubtitledIcon},
         light: {default: ChademoLightIcon, subtitled: ChademoLightSubtitledIcon},
     }, props, props.variant, props.subtitled);
 };
 
-Chademo.propTypes = iconPropTypes;
-
-export const DomesticF = (props) => {
+export const DomesticF = (props: IconProps) => {
     return showIcon({
         solid: {default: DomesticFSolidIcon, subtitled: DomesticFSolidSubtitledIcon},
         light: {default: DomesticFLightIcon, subtitled: DomesticFLightSubtitledIcon},
     }, props, props.variant, props.subtitled);
 };
 
-DomesticF.propTypes = iconPropTypes;
-
-export const IEC603092Single = (props) => {
+export const IEC603092Single = (props: IconProps) => {
     return showIcon({
         solid: {default: IEC603092SingleSolidIcon, subtitled: IEC603092SingleSolidSubtitledIcon},
         light: {default: IEC603092SingleLightIcon, subtitled: IEC603092SingleLightSubtitledIcon},
     }, props, props.variant, props.subtitled);
 };
 
-IEC603092Single.propTypes = iconPropTypes;
-
-export const IEC603092SThree = (props) => {
+export const IEC603092SThree = (props: IconProps) => {
     return showIcon({
         solid: {default: IEC603092SThreeSolidIcon, subtitled: IEC603092SThreeSolidSubtitledIcon},
         light: {default: IEC603092SThreeLightIcon, subtitled: IEC603092SThreeLightSubtitledIcon},
     }, props, props.variant, props.subtitled);
 };
 
-IEC603092SThree.propTypes = iconPropTypes;
-
-export const IEC62196T1 = (props) => {
+export const IEC62196T1 = (props: IconProps) => {
     return showIcon({
         solid: {default: IEC62196T1SolidIcon, subtitled: IEC62196T1SolidSubtitledIcon},
         light: {default: IEC62196T1LightIcon, subtitled: IEC62196T1LightSubtitledIcon},
     }, props, props.variant, props.subtitled);
 };
 
-IEC62196T1.propTypes = iconPropTypes;
-
-export const IEC62196T1Combo = (props) => {
+export const IEC62196T1Combo = (props: IconProps) => {
     return showIcon({
         solid: {default: IEC62196T1ComboSolidIcon, subtitled: IEC62196T1ComboSolidSubtitledIcon},
         light: {default: IEC62196T1ComboLightIcon, subtitled: IEC62196T1ComboLightSubtitledIcon},
     }, props, props.variant, props.subtitled);
 };
 
-IEC62196T1Combo.propTypes = iconPropTypes;
-
-export const IEC62196T2 = (props) => {
+export const IEC62196T2 = (props: IconProps) => {
     return showIcon({
         solid: {default: IEC62196T2SolidIcon, subtitled: IEC62196T2SolidSubtitledIcon},
         light: {default: IEC62196T2LightIcon, subtitled: IEC62196T2LightSubtitledIcon},
     }, props, props.variant, props.subtitled);
 };
 
-IEC62196T2.propTypes = iconPropTypes;
-
-export const IEC62196T2Combo = (props) => {
+export const IEC62196T2Combo = (props: IconProps) => {
     return showIcon({
         solid: {default: IEC62196T2ComboSolidIcon, subtitled: IEC62196T2ComboSolidSubtitledIcon},
         light: {default: IEC62196T2ComboLightIcon, subtitled: IEC62196T2ComboLightSubtitledIcon},
     }, props, props.variant, props.subtitled);
 };
 
-IEC62196T2Combo.propTypes = iconPropTypes;
-
-export const TeslaS = (props) => {
+export const TeslaS = (props: IconProps) => {
     return showIcon({
         solid: {default: TeslaSSolidIcon, subtitled: TeslaSSolidSubtitledIcon},
         light: {default: TeslaSLightIcon, subtitled: TeslaSLightSubtitledIcon},
     }, props, props.variant, props.subtitled);
 };
-
-TeslaS.propTypes = iconPropTypes;
