@@ -13,7 +13,8 @@
   },
   "files": [
     "dist/esm/*",
-    "dist/umd/*"
+    "dist/umd/*",
+    "dist/index.d.ts"
   ],
   "scripts": {
     "build:prod": "NODE_ENV=production rollup -c rollup.config.js",
