@@ -3,11 +3,10 @@ import nodeResolve from '@rollup/plugin-node-resolve';
 import replace from '@rollup/plugin-replace';
 import globals from 'rollup-plugin-node-globals';
 import babel from '@rollup/plugin-babel';
-import svg from 'rollup-plugin-svg';
 import typescript from '@rollup/plugin-typescript';
 import dts from 'rollup-plugin-dts';
 import del from 'rollup-plugin-delete';
-
+import svgr from '@svgr/rollup';
 
 const env = process.env.NODE_ENV;
 
@@ -39,7 +38,7 @@ const config = [
             },
         ],
         plugins: [
-            svg(),
+            svgr(),
             nodeResolve({
                 browser: true,
                 preferBuiltins: true,
@@ -74,7 +73,7 @@ const config = [
             commonjs({
                 exclude: 'src/**',
             }),
-            svg(),
+            svgr(),
             babel({
                 extensions: ['.js', '.ts', '.jsx', '.tsx'],
                 babelHelpers: 'runtime',
