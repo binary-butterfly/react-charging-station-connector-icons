@@ -12,7 +12,8 @@
     "moduleResolution": "Node"
   },
   "include": [
-    "./src/**/*"
+    "./src/**/*",
+    "./test.setup.ts"
   ],
   "exclude": [
     "*.svg"
