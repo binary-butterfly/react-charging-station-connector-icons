@@ -9,7 +9,8 @@ charging-station-connector-icons/
 
 # misc
 .DS_Store
-.idea
+.idea/
+.vs_code/
 
 npm-debug.log*
 
