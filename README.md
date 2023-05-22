@@ -1,4 +1,5 @@
 # React Charge Plug Icons
+[![Coverage Status](https://coveralls.io/repos/github/binary-butterfly/react-charging-station-connector-icons/badge.svg?branch=main)](https://coveralls.io/github/binary-butterfly/react-charging-station-connector-icons?branch=main)
 
 Icons for car charging stations under CC-0. Crafted by Iseris Design and binary butterfly GmbH for the Stadtnavi
 project.  
