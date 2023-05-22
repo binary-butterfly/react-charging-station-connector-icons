@@ -45,13 +45,15 @@ import TeslaSLightSubtitledIcon from '../charging-station-connector-icons/light-
 import {IconProps, IconVariantNames, IconVariants} from './types';
 
 const showIcon = (variants: IconVariants, props: IconProps, variant: IconVariantNames, subtitled: boolean) => {
+    let Component;
     if (variant === 'solid') {
-        return subtitled? variants['solid']['subtitled'] : variants['solid']['default'];
+        Component = subtitled ? variants['solid']['subtitled'] : variants['solid']['default'];
     } else if (variant === 'light') {
-        return subtitled? variants['light']['subtitled'] : variants['light']['default'];
+        Component = subtitled ? variants['light']['subtitled'] : variants['light']['default'];
     } else {
         throw Error('Unsupported variant: ' + variant);
     }
+    return <Component/>;
 };
 
 export const Chademo = (props: IconProps) => {
