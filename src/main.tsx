@@ -118,3 +118,5 @@ export const TeslaS = (props: IconProps) => {
         light: {default: TeslaSLightIcon, subtitled: TeslaSLightSubtitledIcon},
     }, props, props.variant, props.subtitled);
 };
+
+export {TeslaS as NACS};
