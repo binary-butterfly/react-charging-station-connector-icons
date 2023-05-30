@@ -8,6 +8,7 @@ import {
     IEC62196T1Combo,
     IEC62196T2,
     IEC62196T2Combo,
+    NACS,
     TeslaS,
 } from '../src/main';
 import {render} from '@testing-library/react';
@@ -190,6 +191,26 @@ describe('react-charging-station-connector-icons', () => {
 
     it('Can render a solid subtitled TeslaS icon', () => {
         const rendered = render(<TeslaS variant="solid" subtitled={true}/>);
+        expect(rendered).toMatchSnapshot();
+    });
+
+    it('Can render a light non subtitled NACS icon', () => {
+        const rendered = render(<NACS variant="light" subtitled={false}/>);
+        expect(rendered).toMatchSnapshot();
+    });
+
+    it('Can render a light subtitled NACS icon', () => {
+        const rendered = render(<NACS variant="light" subtitled={true}/>);
+        expect(rendered).toMatchSnapshot();
+    });
+
+    it('Can render a solid non subtitled NACS icon', () => {
+        const rendered = render(<NACS variant="solid" subtitled={false}/>);
+        expect(rendered).toMatchSnapshot();
+    });
+
+    it('Can render a solid subtitled NACS icon', () => {
+        const rendered = render(<NACS variant="solid" subtitled={true}/>);
         expect(rendered).toMatchSnapshot();
     });
 
