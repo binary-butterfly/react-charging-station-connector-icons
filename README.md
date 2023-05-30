@@ -24,7 +24,7 @@ The following components are available:
 * `<IEC62196T1Combo/>`
 * `<IEC62196T2/>`
 * `<IEC62196T2Combo/>`
-* `<TeslaS/> (also exported as <NACS/>`
+* `<TeslaS/>` (also exported as `<NACS/>`)
 
 All icons are available in solid and light variants as well as with- and without subtitles.
 
