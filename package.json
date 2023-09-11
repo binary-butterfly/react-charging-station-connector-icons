@@ -16,6 +16,12 @@
     "dist/umd/*",
     "dist/index.d.ts"
   ],
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/umd/react-charging-station-connector-icons.js"
+    }
+  },
   "scripts": {
     "build:prod": "NODE_ENV=production rollup -c rollup.config.js",
     "prepublishOnly": "npm run build:prod",
