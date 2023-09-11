@@ -12,9 +12,7 @@
     "url": "https://github.com/binary-butterfly/react-charging-station-connector-icons"
   },
   "files": [
-    "dist/esm/*",
-    "dist/umd/*",
-    "dist/index.d.ts"
+    "./dist"
   ],
   "exports": {
     ".": {
