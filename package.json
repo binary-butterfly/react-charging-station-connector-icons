@@ -1,6 +1,6 @@
 {
   "name": "react-charging-station-connector-icons",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "license": "CC0-1.0",
   "private": false,
   "main": "dist/umd/react-charging-station-connector-icons.js",
@@ -16,6 +16,12 @@
     "dist/umd/*",
     "dist/index.d.ts"
   ],
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/umd/react-charging-station-connector-icons.js"
+    }
+  },
   "scripts": {
     "build:prod": "NODE_ENV=production rollup -c rollup.config.js",
     "prepublishOnly": "npm run build:prod",
