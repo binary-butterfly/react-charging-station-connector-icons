@@ -19,6 +19,7 @@ jobs:
           node-version: 24
           cache: 'npm'
       - run: npm install
+      - run: npx playwright install --with-deps
       - run: npm run build:prod
       - run: npm run typecheck
       - run: npm run coverage
