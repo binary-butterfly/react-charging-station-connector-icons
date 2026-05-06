@@ -1,21 +1,31 @@
 {
   "compilerOptions": {
+    "lib": [
+      "es6",
+      "dom"
+    ],
     "allowJs": true,
-    "target": "es5",
-    "jsx": "react",
+    "target": "es2020",
+    "jsx": "react-jsx",
     "allowSyntheticDefaultImports": true,
     "rootDir": ".",
     "sourceMap": true,
     "outDir": "dist",
+    "noEmit": true,
     "strict": true,
+    "skipLibCheck": true,
     "noImplicitReturns": true,
-    "moduleResolution": "Node"
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "types": [
+      "vitest/globals"
+    ]
   },
   "include": [
-    "./src/**/*",
-    "./test.setup.ts"
-  ],
-  "exclude": [
-    "*.svg"
+    "./src/*",
+    "./vite.config.ts",
+    "./vitest.shims.d.ts"
   ]
 }
