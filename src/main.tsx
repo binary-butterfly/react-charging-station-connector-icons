@@ -1,5 +1,3 @@
-import React from 'react';
-
 import ChademoSolidIcon from '../charging-station-connector-icons/solid/CHADEMO.svg?react';
 import ChademoSolidSubtitledIcon from '../charging-station-connector-icons/solid-subtitled/CHADEMO.svg?react';
 import ChademoLightIcon from '../charging-station-connector-icons/light/CHADEMO.svg?react';
