@@ -31,8 +31,8 @@ export default defineConfig({
         lib: {
             entry: path.resolve(__dirname, './src/main.tsx'),
             name: 'react-charging-station-connector-icons',
-            fileName: (format) => `rcsci.${format}.js`,
-            formats: ['es', 'cjs'],
+            fileName: (format) => `rcsci.${format}.${format === 'es' ? 'm' : ''}js`,
+            formats: ['es'],
         },
         rollupOptions: {
             external: [

@@ -3,21 +3,21 @@
   "version": "2.0.0-rc2",
   "license": "CC0-1.0",
   "private": false,
-  "main": "dist/rcsci.cjs.js",
-  "module": "dist/rcsci.es.js",
+  "module": "dist/rcsci.es.mjs",
   "types": "dist/main.d.ts",
+  "type": "module",
   "sideEffects": false,
   "repository": {
     "type": "git",
-    "url": "https://github.com/binary-butterfly/react-charging-station-connector-icons"
+    "url": "git+https://github.com/binary-butterfly/react-charging-station-connector-icons.git"
   },
   "files": [
     "./dist"
   ],
   "exports": {
     ".": {
-      "import": "./dist/rcsci.es.js",
-      "require": "./dist/rcsci.cjs.js"
+      "types": "./dist/main.d.ts",
+      "import": "./dist/rcsci.es.mjs"
     }
   },
   "scripts": {
@@ -26,18 +26,20 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "coverage": "vitest run --coverage",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "publint": "publint"
   },
   "devDependencies": {
     "@binary-butterfly/eslint-config": "^1.0.0-rc5",
-    "@vitest/browser-playwright": "^4.1.5",
     "@types/node": "^25.6.0",
     "@types/react": "^19.2.14",
     "@vitejs/plugin-react": "^6.0.1",
     "@vitest/browser": "^4.1.5",
+    "@vitest/browser-playwright": "^4.1.5",
     "@vitest/coverage-v8": "^4.1.5",
     "eslint": "^9.39.4",
     "playwright": "^1.59.1",
+    "publint": "^0.3.19",
     "typescript": "^6.0.3",
     "vite": "^8.0.10",
     "vite-plugin-dts": "^5.0.0",
