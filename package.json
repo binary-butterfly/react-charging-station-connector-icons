@@ -1,6 +1,6 @@
 {
   "name": "react-charging-station-connector-icons",
-  "version": "2.0.0-rc1",
+  "version": "2.0.0-rc2",
   "license": "CC0-1.0",
   "private": false,
   "main": "dist/rcsci.cjs.js",
@@ -30,6 +30,7 @@
   },
   "devDependencies": {
     "@binary-butterfly/eslint-config": "^1.0.0-rc5",
+    "@vitest/browser-playwright": "^4.1.5",
     "@types/node": "^25.6.0",
     "@types/react": "^19.2.14",
     "@vitejs/plugin-react": "^6.0.1",
@@ -45,9 +46,7 @@
     "vitest-browser-react": "^2.2.0"
   },
   "peerDependencies": {
-    "react": "^19.2.5"
-  },
-  "dependencies": {
-    "@vitest/browser-playwright": "^4.1.5"
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6"
   }
 }

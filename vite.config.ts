@@ -1,3 +1,4 @@
+/// <reference types="vitest/config" />
 import {defineConfig} from 'vite';
 import react from '@vitejs/plugin-react';
 import dts from 'vite-plugin-dts';
@@ -7,8 +8,16 @@ import {playwright} from '@vitest/browser-playwright';
 
 export default defineConfig({
     plugins: [
-        react(),
-        svgr(),
+        react({
+            jsxRuntime: 'automatic',
+        }),
+        svgr({
+            svgrOptions: {
+                exportType: 'default',
+                svgo: false,
+                jsxRuntime: 'automatic',
+            },
+        }),
         dts({
             tsconfigPath: 'tsconfig.json',
             include: ['src/'],
@@ -29,6 +38,7 @@ export default defineConfig({
             external: [
                 'react',
                 'react-dom',
+                'react/jsx-runtime',
             ],
             output: {
                 globals: {
@@ -36,7 +46,7 @@ export default defineConfig({
                     'react-dom': 'ReactDOM',
                 },
                 exports: 'auto',
-                inlineDynamicImports: true,
+                codeSplitting: false,
                 preserveModules: false,
             },
         },
@@ -46,17 +56,14 @@ export default defineConfig({
         alias: {
             '@': path.resolve(__dirname, 'src'),
         },
-    }, // @ts-ignore
+    },
     test: {
         globals: true,
         clearMocks: true,
-        testTransformMode: 'web',
         maxConcurrency: 8,
         testTimeout: 20000,
-        extends: true,
         coverage: {
             reporter: ['text', 'html', 'clover', 'json', 'cobertura'],
-            all: true,
             include: ['src/**'],
             exclude: [],
             provider: 'v8',
@@ -69,12 +76,11 @@ export default defineConfig({
             instances: [
                 {
                     browser: 'chromium',
-                    launch: {
-                        args: ['--disable-web-security'],
-                        options: {
-                            actionTimeout: 10000,
+                    provider: playwright({
+                        launchOptions: {
+                            args: ['--disable-web-security'],
                         },
-                    },
+                    }),
                     viewport: {width: 1280, height: 720},
                 },
             ],
